@@ -167,7 +167,7 @@ source $DOTFILES/components/osx/preferences/apps/Safari.app
 source $DOTFILES/components/osx/preferences/apps/Calendar.app
 
 # Kill affected applications
-fuckosx
+killosx
 for app in "Address Book" "Calendar" "Contacts" "Messages"
 do
   killa "${app}"

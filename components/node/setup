@@ -7,7 +7,7 @@ then
 fi
 
 echo_title_installupdate "NPM global packages"
-if [ "$FULLFIRE" = "true" ]
+if [ "$FULLINSTALL" = "true" ]
 then
   npmug
 fi

@@ -3,8 +3,6 @@
 export DOTFILES="$( cd "$( dirname "${0}" )"/../ && pwd )"
 source $DOTFILES/index.zsh
 
-echo "\n(╯°□°）╯ ︵ $CHAR_BOOM\n"
-
 # Ask for the administrator password upfront
 sudo -v
 
@@ -16,15 +14,15 @@ git pull origin master
 git submodule init
 git submodule update
 
-export FULLFIRE=false
+export FULLINSTALL=false
 if [ "$1" = "--full" ]
 then
-	FULLFIRE=true
+	FULLINSTALL=true
 fi
 
 source $DOTFILES/bin/kaboom
 
 if type "say" > /dev/null
 then
-  say "Dude, dotfiles update is done"
+  say "Dotfiles update is done"
 fi

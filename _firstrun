@@ -3,14 +3,9 @@
 # define zsh as default shell
 chsh -s /bin/zsh $USER
 
-echo "Visit https://appleseed.apple.com/sp/betaprogram to get OS X beta update"
-open "https://appleseed.apple.com/sp/betaprogram"
-read -k
-
+# If we are under a Mac OS X platform   
 if [[ "$(uname -s)" == "Darwin" ]]
 then
-  # todo add an alternative to grab xcode from another computer accessible by local network
-
   echo "** Before running myself, please be sure you have `git` command working **".
   echo ""
   echo "to skip 'Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.'"
@@ -21,18 +16,15 @@ then
   echo "You can try the following if you are on a stable OS X version (with stable Xcode)"
   echo "  xcode-select --install"
   echo ""
-  echo "If you are on an Developer Preview/Beta try (replace {VERSION})"
-  echo "  sudo xcode-select --switch /Applications/Xcode{VERSION}-Beta.app/Contents/Developer/"
-  echo "  xcode-select --install"
-  echo ""
-  echo ""
   echo "Press return when `git` command is available"
   read -k
 fi
 
+# If the dotfiles directory does not exist in $HOME
+# git clone it! If it exist, pull and update it.
 if [[ ! -d $HOME/dotfiles ]]
 then
-  git clone http://github.com/MoOx/dotfiles.git $HOME/dotfiles
+  git clone http://github.com/Macxim/dotfiles.git $HOME/dotfiles
   git submodule init
 else
   cd $HOME/dotfiles
@@ -56,14 +48,10 @@ else
     mkdir $HOME/Applications
   fi
 
-  . $HOME/dotfiles/bin/fireinthehole --full
-
-  # todo add login items
+  . $HOME/dotfiles/bin/setup --full
 
   if ! type "say" > /dev/null
   then
-    say "YO BITCH, setup is done \!"
-    sleep 5
-    say "HEY BITCH ! Did you heard what I just said \?"
+    say "Setup is done \!"
   fi
 fi

@@ -14,20 +14,20 @@ alias ss="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaver
 alias killa="killall '${app}' > /dev/null 2>&1"
 
 # FUCK YOU OSX (ps: I love you )
-alias fuckosxprefs="killall -u $USER cfprefsd"
-alias fuckosxfinder="killa Finder; if [ -e /Applications/XtraFinder.app ]; then; open /Applications/XtraFinder.app; fi"
-alias fuckosxdock="killa Dock"
-alias fuckosxmenubar="killa SystemUIServer NotificationCenter"
-alias fuckosx="fuckosxprefs && fuckosxfinder && fuckosxdock && fuckosxmenubar"
+alias killosxprefs="killall -u $USER cfprefsd"
+alias killosxfinder="killa Finder; if [ -e /Applications/XtraFinder.app ]; then; open /Applications/XtraFinder.app; fi"
+alias killosxdock="killa Dock"
+alias killosxmenubar="killa SystemUIServer NotificationCenter"
+alias killosx="killosxprefs && killosxfinder && killosxdock && killosxmenubar"
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && fuckosxfinder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && fuckosxfinder"
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killosxfinder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killosxfinder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias desktop="defaults write com.apple.finder CreateDesktop -bool"
-alias hidedesktop="desktop false && fuckosxfinder"
-alias showdesktop="desktop true && fuckosxfinder"
+alias hidedesktop="desktop false && killosxfinder"
+alias showdesktop="desktop true && killosxfinder"
 
 alias osx-bootableusb="sudo \"$OSX_INSTALL_APP/Contents/Resources/createinstallmedia\" --volume /Volumes/Untitled --applicationpath \"$OSX_INSTALL_APP\" --nointeraction"
 

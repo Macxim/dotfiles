@@ -1,23 +1,20 @@
 #!/bin/zsh
 
-# for vpn
-brewcaskinstall "Tunnelblick" $HOME/Applications
 
-# just in case
+# Image Optimization
 brewcaskinstall "ImageOptim" $HOME/Applications
 brewcaskinstall "ImageAlpha" $HOME/Applications
 
-# more utilities
-brewcaskinstall "Mou" $HOME/Applications
+# More utilities
+brewcaskinstall "Transmit" $HOME/Applications
 
-brewcaskinstall "Synergy" $HOME/Applications
+brewcaskinstall "Mou" $HOME/Applications
 
 brewcaskinstall "NameChanger" $HOME/Applications
 
 brewcaskinstall "GrandPerspective" $HOME/Applications
 
-brewcaskinstall "VirtualBox" $HOME/Applications
-brewcaskinstall "VMWare Fusion" $HOME/Applications
+#brewcaskinstall "VirtualBox" $HOME/Applications
 
-fuckosxprefs
-fuckosxdock
+killosxprefs
+killosxdock

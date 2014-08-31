@@ -4,7 +4,7 @@ source $DOTFILES/index.zsh
 DIR_BIN="$( cd "$( dirname "${0}" )" && pwd )"
 source $DIR_BIN/.symlinks
 
-if [ "$FULLFIRE" = "true" ]
+if [ "$FULLINSTALL" = "true" ]
 then
 	source appstore
 fi
@@ -15,7 +15,7 @@ setup brew
 if type "say" > /dev/null
 then
 	say "Password might be required"
-	if [ "$FULLFIRE" = "true" ]
+	if [ "$FULLINSTALL" = "true" ]
 	then
 		say "And be careful, since it's you first run, it will probably be asked more than once. Check often until process is complete."
 	fi
@@ -60,8 +60,3 @@ setup ruby
 setup lazydev
 
 setup sharing
-
-# todo add cron setup
-
-echo ""
-echo_success "BOOYA $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM"

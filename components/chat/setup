@@ -21,5 +21,5 @@ dockutil --no-restart --add "/Applications/Skype.app" --after "LimeChat"
 brewcaskinstall "Slack"
 dockutil --no-restart --add "/Applications/Slack.app" --after "LimeChat"
 
-fuckosxprefs
-fuckosxdock
+killosxprefs
+killosxdock

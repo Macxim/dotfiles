@@ -1,10 +1,6 @@
-# MoOx `dotfiles`
+# Macxim's `dotfiles`
 
-> When dotfiles go crazy.
-
-<img alt="" align="right" src="https://raw.github.com/MoOx/dotfiles/master/backpack/i/kabooya.gif" />
-
-Just run `fireinthehole`. It should setup the computer.
+Just run `setup`. Pretty self-explanatory.
 
 - Commands & aliases for CLI
 - OS configuration
@@ -16,16 +12,15 @@ Just run `fireinthehole`. It should setup the computer.
 ## First run
 
 ```
-$ curl -fsSL https://raw.github.com/MoOx/dotfiles/master/backpack/firstrun | zsh
+$ curl -fsSL https://raw.github.com/Macxim/dotfiles/master/_firstrun | zsh
 ```
 
 ## Commands & aliases
 
-<img alt="preview" align="right" src="https://raw.github.com/MoOx/dotfiles/master/backpack/i/fireinthehole.png" />
 
-### `$ fireinthehole` (╯°□°）╯ ︵ 💥
+### `$ setup`
 
-This command should update this repository, then trigger `kaboom` (which is the heart of this _dotfiles_).
+This command should update this repository, then trigger `install` (which is the heart of this _dotfiles_).
 _Note: you will sometimes need to enter you password or some informations related to current installation_.
 
 This command launch like everything you define. If you have nothing special, it should take around 30s (mainly because of brew/npm/gem updates).
@@ -64,9 +59,9 @@ Update & commit updated submodules
 
 Open the AppStore (at least on OS X).
 
-### `$ fuckosx`
+### `$ killosx`
 
-Reload OSX Finder, Dock & Menubar. Alias for `fuckosxfinder`, `fuckosxdock` & `fuckosxmenubar`.
+Reload OSX Finder, Dock & Menubar. Alias for `killosxfinder`, `killosxdock` & `killosxmenubar`.
 
 ### `$ list`
 
@@ -80,16 +75,16 @@ List all aliases & functions (except _*) that will match the query (it's a `list
 
 ---
 
-## How it works ?
+## How does it work?
 
-Additionally to `fireinthehole` and `kaboom`, there is a lot of others commands available in each components.
+Additionally to `setup` and `install`, there is a lot of others commands available in each components.
 This dotfiles, like [holman](https://github.com/holman/dotfiles#topical) ones, are built around topic areas.
 Take a look to [components](components) to see available components.
 _Note: some components may require other(s) (eg: `brew` component is used a lot :) )_
 
-Most of the time, components contains a `setup` file that you can use in `kaboom`.
+Most of the time, components contains a `setup` file that you can use in `install`.
 
-**[`kaboom`](bin/kaboom) mainly just run components `setup` in the predefined order.**
+**[`install`](bin/install) mainly just run components `setup` in the predefined order.**
 
 ## Component definition
 
@@ -140,6 +135,7 @@ There’s also a tool called GDB which can be used to find hidden preferences.
 
 ## Inspired by
 
+- https://github.com/MoOx/dotfiles
 - https://github.com/holman/dotfiles
 - https://github.com/mathiasbynens/dotfiles
 - https://github.com/necolas/dotfiles
