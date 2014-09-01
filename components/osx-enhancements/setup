@@ -15,11 +15,18 @@ plistbuddy "Application Support/Flycut/com.generalarcade.flycut" "Set removeDupl
 brewcaskinstall "Prefs Editor" "prefs-editor"
 
 # enhance OS X with some small utilities
+# http://www.freemacsoft.net/appcleaner/
 brewcaskinstall "AppCleaner" "appcleaner"
 
+# http://shauninman.com/archive/2011/10/20/day_o_mac_menu_bar_clock
 brewcaskinstall "Day-O" "day-o"
 openifnot "Day-O" "/Applications/Day-O.app"
 
+# http://brettterpstra.com/projects/nvalt/
+brewcaskinstall "nvalt"
+openifnot "nvALT" "/Applications/nvalt.app"
+
+# https://justgetflux.com
 brewcaskinstall "Flux"
 openifnot "Flux" "/Applications/Flux.app"
 

@@ -55,5 +55,7 @@ openifnot "Dropbox" "/Applications/Dropbox.app"
 
 ##
 # Misc
+# System recovery app
+# http://www.shirt-pocket.com/SuperDuper/SuperDuperDescription.html
 ##
-brewcaskinstall "SuperDuper!" "superduper"
+# brewcaskinstall "SuperDuper!" "superduper"

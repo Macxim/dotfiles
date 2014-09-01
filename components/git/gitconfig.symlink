@@ -1,9 +1,9 @@
 [user]
-	name = Maxime Thirouin
-	email = m@moox.io
+	name = Maxime Laforet
+	email = maxime10081985@gmail.com
 
 [github]
-	user = MoOx
+	user = Macxim
 
 [hub]
 	protocol = https
@@ -13,7 +13,7 @@
 
 [core]
 	quotepath = false
-	editor = atom -w
+	editor = subl -w
 	excludesfile = ~/.gitignore_global
 
 [push]

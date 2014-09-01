@@ -18,28 +18,16 @@ npmig mversion
 # build tools
 npmig component
 npmig gulp
+npmig grunt
 npmig grunt-cli
-
-# browserify all the things
-npmig browserify
-npmig testling
-npmig coverify
-npmig tape
 
 # code quality tools
 npmig htmlhint
 npmig csslint
 npmig jshint
-npmig jscs
 
 # css tools
 npmig autoprefixer
 
-# happyplan launcher
-npmig happyplan-cli
-
-npmig travis-encrypt
-
 # package helpers
-npmig pkg-name
 npmig bower

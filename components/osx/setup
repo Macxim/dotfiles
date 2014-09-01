@@ -72,13 +72,10 @@ fi
 defaults write com.apple.screensaver askForPassword -int 0
 
 # Startup sound chime effect (disable: %00)
-sudo nvram SystemAudioVolume=%10﻿
+sudo nvram SystemAudioVolume=%00﻿
 
 # Enable subpixel font rendering on non-Apple LCDs
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
-# recovery_message 'If this Mac is found, please call +33 6 78 13 54 39 - Si vous trouvez ce Mac, merci d\'appeler le 06 78 13 54 39': }
-# https://github.com/boxen/puppet-osx/blob/master/manifests/recovery_message.pp
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
