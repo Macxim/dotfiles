@@ -20,7 +20,7 @@ then
 	FULLINSTALL=true
 fi
 
-source $DOTFILES/bin/kaboom
+source $DOTFILES/bin/install
 
 if type "say" > /dev/null
 then
