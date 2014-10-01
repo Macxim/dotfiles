@@ -6,21 +6,6 @@ then
   brewinstall git
 fi
 
-if ! type "hub" > /dev/null
-then
-  echo_title_install "GitHub cli tools"
-  brewinstall hub
-fi
-
-if ! type "ghi" > /dev/null
-then
-  echo_title_install "GitHub issues cli tools"
-  brewinstall ghi
-fi
-
-brewcaskinstall "GitHub" $HOME/Applications
-dockutil --no-restart --add "$HOME/Applications/GitHub.app" --after "iTerm"
-
 brewcaskinstall "SourceTree" $HOME/Applications
 
 killosxprefs
