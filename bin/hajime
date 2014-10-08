@@ -3,7 +3,10 @@
 export DOTFILES="$( cd "$( dirname "${0}" )"/../ && pwd )"
 source $DOTFILES/index.zsh
 
-echo "\n$CHAR_BOOM Set up ALL the things! $CHAR_BOOM\n"
+echo "\n$CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM\n"
+echo "\n$CHAR_BOOM  Set up ALL the things! $CHAR_BOOM\n"
+echo "\n$CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM $CHAR_BOOM\n"
+
 
 # Ask for the administrator password upfront
 sudo -v
