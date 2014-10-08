@@ -13,6 +13,3 @@ npmig trash
 # essential missing commands to OSX
 brewinstall tree
 brewinstall ssh-copy-id
-
-# to create favicons
-brewinstall icoutils
