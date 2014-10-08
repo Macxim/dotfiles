@@ -6,17 +6,19 @@ chsh -s /bin/zsh $USER
 # If we are under a Mac OS X platform   
 if [[ "$(uname -s)" == "Darwin" ]]
 then
-  echo "** Before running myself, please be sure you have 'git' command working **".
+  echo "Before running myself, please be sure you have 'git' command working".
   echo ""
-  echo "to skip 'Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.'"
+  echo "In order to skip the following message:"
+  echo "'Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.'"
+  echo "You can run"
   echo "  sudo xcodebuild -license"
-  echo "or just open Xcode and agree the license..."
+  echo "or just open Xcode and agree to the license."
   echo ""
-  echo "You may need Xcode Command line tools"
+  echo "You may need Xcode Command-Line Tools"
   echo "You can try the following if you are on a stable OS X version (with stable Xcode)"
   echo "  xcode-select --install"
   echo ""
-  echo "Press return when `git` command is available"
+  echo "Press return when 'git' command is available"
   read -k
 fi
 
