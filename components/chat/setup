@@ -1,7 +1,6 @@
 #!/bin/zsh
 
 brewcaskinstall "LimeChat" $HOME/Applications
-dockutil --no-restart --add "$HOME/Applications/LimeChat.app" --after "Messages"
 openifnot "LimeChat" "$HOME/Applications/LimeChat.app"
 
 LIMECHAT_THEME="$LIMECHAT_THEMES/LimeChat-theme-Monokai-Soda"
@@ -16,11 +15,7 @@ else
 fi
 
 brewcaskinstall "Skype"
-dockutil --no-restart --add "/Applications/Skype.app" --after "LimeChat"
-
 brewcaskinstall "Slack"
-dockutil --no-restart --add "/Applications/Slack.app" --after "LimeChat"
-
 brewcaskinstall "Adium"
 
 killosxprefs

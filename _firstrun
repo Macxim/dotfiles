@@ -50,7 +50,7 @@ else
     mkdir $HOME/Applications
   fi
 
-  . $HOME/dotfiles/bin/setup --full
+  . $HOME/dotfiles/bin/hajime --full
 
   if ! type "say" > /dev/null
   then
