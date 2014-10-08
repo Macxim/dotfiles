@@ -30,11 +30,8 @@ setup node
 setup _cli
 setup ssh
 
-setup atom
-
 setup sync
 
-setup logitech
 setup browsers
 
 setup slate
