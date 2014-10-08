@@ -6,7 +6,7 @@ chsh -s /bin/zsh $USER
 # If we are under a Mac OS X platform   
 if [[ "$(uname -s)" == "Darwin" ]]
 then
-  echo "** Before running myself, please be sure you have `git` command working **".
+  echo "** Before running myself, please be sure you have 'git' command working **".
   echo ""
   echo "to skip 'Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.'"
   echo "  sudo xcodebuild -license"
