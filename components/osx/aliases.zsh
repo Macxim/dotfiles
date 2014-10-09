@@ -45,9 +45,12 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN?!'"
 
 alias ios="open /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app"
 
 alias startinternetsharing="sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.InternetSharing.plist"
 alias stopinternetsharing="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.InternetSharing.plist"
+
+# get resolution of the diplay(s)
+alias osx-resolutions="system_profiler SPDisplaysDataType | grep Resolution | tr -d ' '"
