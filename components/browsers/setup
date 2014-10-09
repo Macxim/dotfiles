@@ -1,7 +1,6 @@
 #!/bin/zsh
 
 brewcaskinstall "Firefox"
-dockutil --no-restart --add "/Applications/Firefox.app" --before "Safari"
 
 brewcaskinstall "Google Chrome"
 dockutil --no-restart --add "/Applications/Google Chrome.app" --after "Safari"
