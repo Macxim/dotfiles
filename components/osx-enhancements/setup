@@ -23,17 +23,3 @@ brewcaskinstall "Utilities/XQuartz" "xquartz"
 
 # Trim enable for non Apple SSD
 # brewcaskinstall "Trim Enabler"
-
-# QuickLook plugins from https://github.com/sindresorhus/quick-look-plugins
-brewcaskinstall "/opt/homebrew-cask/Caskroom/qlcolorcode" "qlcolorcode"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/qlstephen" "qlstephen"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/qlmarkdown" "qlmarkdown"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/quicklook-json" "quicklook-json"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/qlprettypatch" "qlprettypatch"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/quicklook-csv" "quicklook-csv"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/betterzipql" "betterzipql"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/webp-quicklook" "webp-quicklook"
-brewcaskinstall "/opt/homebrew-cask/Caskroom/suspicious-package" "suspicious-package"
-
-# reset QuickLook plugins
-qlmanage -r &> /dev/null
