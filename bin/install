@@ -30,6 +30,8 @@ setup node
 setup _cli
 setup ssh
 
+setup sublime
+
 setup sync
 
 setup browsers
