@@ -41,7 +41,6 @@ setup chat
 setup multimedia
 
 setup download
-setup misc
 
 # stuff that require human interaction at the end
 setup prey
