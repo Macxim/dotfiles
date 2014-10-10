@@ -2,19 +2,19 @@
 
 
 # Image Optimization
-brewcaskinstall "ImageOptim" $HOME/Applications
-brewcaskinstall "ImageAlpha" $HOME/Applications
+brewcaskinstall "ImageOptim"
+brewcaskinstall "ImageAlpha"
 
 # More utilities
-brewcaskinstall "Transmit" $HOME/Applications
+brewcaskinstall "Transmit"
 
-brewcaskinstall "Mou" $HOME/Applications
+brewcaskinstall "Mou"
 
-brewcaskinstall "NameChanger" $HOME/Applications
+brewcaskinstall "NameChanger"
 
-brewcaskinstall "GrandPerspective" $HOME/Applications
+brewcaskinstall "GrandPerspective"
 
-#brewcaskinstall "VirtualBox" $HOME/Applications
+#brewcaskinstall "VirtualBox"
 
 killosxprefs
 killosxdock
