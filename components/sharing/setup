@@ -3,7 +3,7 @@
 ###
 # Cloud.app
 ###
-brewcaskinstall "Cloud" $HOME/Applications
+brewcaskinstall "Cloud"
 defaults write com.linebreak.CloudAppMacOSX copyLinkType 1 # direct link
 defaults write com.linebreak.CloudAppMacOSX autouploadScreenshots 1
 defaults write com.linebreak.CloudAppMacOSX launchAtLogin 1

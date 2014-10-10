@@ -6,7 +6,7 @@ brewcaskinstall "MPlayerX"
 brewcaskinstall "All2MP3"
 
 brewcaskinstall "Subtitles"
-brewcaskinstall "Jubler" $HOME/Applications
+brewcaskinstall "Jubler"
 
 killosxprefs
 killosxdock
