@@ -6,9 +6,10 @@ brewcaskinstall "ImageOptim"
 brewcaskinstall "ImageAlpha"
 
 # More utilities
-brewcaskinstall "Transmit"
-
 brewcaskinstall "Mou"
+
+brewcaskinstall the-unarchiver
+brewcaskinstall "Keka"
 
 brewcaskinstall "NameChanger"
 

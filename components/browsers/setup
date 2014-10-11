@@ -4,7 +4,7 @@ brewcaskinstall "Google Chrome"
 dockutil --no-restart --add "/Applications/Google Chrome.app" --after "Safari"
 
 brewcaskinstall "Firefox"
-dockutil --no-restart --add "/Applications/Firefox.app" --after "Chrome"
+dockutil --no-restart --add "/Applications/Firefox.app" --after "Google Chrome"
 
 brewcaskinstall "Opera"
 

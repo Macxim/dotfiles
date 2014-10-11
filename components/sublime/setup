@@ -7,3 +7,14 @@ ln -sf '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' /usr/loc
 # Install the Package Control package.
 mkdir -p "$HOME/Library/Application Support/Sublime Text 3/Installed Packages"
 curl -O https://sublime.wbond.net/Package%20Control.sublime-package -o "~/Library/Application Support/Sublime Text 3/Installed Packages/Package Control.sublime-package"
+
+
+
+if [ ! -e "~/Library/Application Support/Sublime Text 3/Packages/" ]
+then
+  echo_title_install "Sublime Text 3 User Preferences, Themes and Packages"
+  git clone https://github.com/Macxim/sublime-text-settings.git "User"
+else
+  echo_title_update "Sublime Text 3 User Preferences, Themes and Packages"
+  git -C / pull
+fi

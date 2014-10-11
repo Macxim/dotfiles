@@ -4,6 +4,7 @@ brewcaskinstall "VLC"
 brewcaskinstall "MPlayerX"
 
 brewcaskinstall "All2MP3"
+brewcaskinstall "Vox"
 
 brewcaskinstall "Subtitles"
 brewcaskinstall "Jubler"
