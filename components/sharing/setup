@@ -25,7 +25,5 @@ then
   echo $CLOUDAPP_PWD >> $CLOUDAPP_CREDS
 fi
 
-gemig gifme
-
 brewinstall imagemagick
 brewinstall ffmpeg
