@@ -1,4 +1,4 @@
 #!/bin/zsh
 
 brewcaskinstall Slate
-openifnot "Slate" "$HOME/Applications/Slate.app"
+openifnot "Slate" "/Applications/Slate.app"
