@@ -2,7 +2,6 @@
 
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Safari.app"
-dockutil --no-restart --add "/Applications/Xcode.app/Contents/Applications/iPhone Simulator.app"
 dockutil --no-restart --add "/Applications/Mail.app"
 
 defaults write com.apple.dock tilesize -int 36
