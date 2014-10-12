@@ -12,6 +12,7 @@ curl -O https://sublime.wbond.net/Package%20Control.sublime-package -o "~/Librar
 
 if [ ! -e "~/Library/Application Support/Sublime Text 3/Packages/" ]
 then
+  rm -rf ~/Library/Application Support/Sublime Text 3/Packages/User
   echo_title_install "Sublime Text 3 User Preferences"
   git clone https://github.com/Macxim/sublime-text-settings.git "User"
 else
