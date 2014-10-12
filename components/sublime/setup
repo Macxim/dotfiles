@@ -1,4 +1,4 @@
-brewcaskinstall sublime-text3 "/Applications/Sublime Text.app"
+brewcaskinstall "Sublime Text 3"
 dockutil --add '/Applications/Sublime Text.app'
  
 # Make sure we can start Sublime Text from the command line.
@@ -12,9 +12,9 @@ curl -O https://sublime.wbond.net/Package%20Control.sublime-package -o "~/Librar
 
 if [ ! -e "~/Library/Application Support/Sublime Text 3/Packages/" ]
 then
-  echo_title_install "Sublime Text 3 User Preferences, Themes and Packages"
+  echo_title_install "Sublime Text 3 User Preferences"
   git clone https://github.com/Macxim/sublime-text-settings.git "User"
 else
-  echo_title_update "Sublime Text 3 User Preferences, Themes and Packages"
+  echo_title_update "Sublime Text 3 User Preferences"
   git -C / pull
 fi
