@@ -1,4 +1,5 @@
-brew tap caskroom/homebrew-versions
+#!/bin/zsh
+
 brewcaskinstall sublime-text3
 dockutil --add '/Applications/Sublime Text.app'
  
