@@ -1,4 +1,4 @@
-brewcaskinstall "Sublime Text 3"
+brewcaskinstall "Sublime Text3"
 dockutil --add '/Applications/Sublime Text.app'
  
 # Make sure we can start Sublime Text from the command line.

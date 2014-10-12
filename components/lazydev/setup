@@ -8,7 +8,7 @@ brewcaskinstall "ImageAlpha"
 # More utilities
 brewcaskinstall "Mou"
 
-brewcaskinstall the-unarchiver
+brewcaskinstall "The Unarchiver"
 brewcaskinstall "Keka"
 
 brewcaskinstall "NameChanger"
