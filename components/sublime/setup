@@ -1,4 +1,5 @@
-brewcaskinstall "Sublime Text3"
+brew tap caskroom/homebrew-versions
+brewcaskinstall sublime-text3
 dockutil --add '/Applications/Sublime Text.app'
  
 # Make sure we can start Sublime Text from the command line.
