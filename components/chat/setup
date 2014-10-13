@@ -1,7 +1,7 @@
 #!/bin/zsh
 
-brewcaskinstall "LimeChat"
-openifnot "LimeChat" "/Applications/LimeChat.app"
+brewcaskinstall LimeChat
+openifnot LimeChat "/Applications/LimeChat.app"
 
 LIMECHAT_THEME="$LIMECHAT_THEMES/LimeChat-theme-Monokai-Soda"
 if [ ! -e "$LIMECHAT_THEME.css" ]
@@ -14,9 +14,17 @@ else
   git -C $LIMECHAT_THEME pull
 fi
 
-brewcaskinstall "Skype"
-brewcaskinstall "Slack"
-brewcaskinstall "Adium"
+brewcaskinstall Skype
+brewcaskinstall Slack
+brewcaskinstall Adium
+
+# The simple 2 lines above was enough for Slask
+# until they name the .app with the version in the dmg
+# like "Slack 0.44.2.app"...
+# brewcaskinstall Slack
+# dockutil --no-restart --add "/Applications/Slack.app" --after LimeChat
+# so here is the way to fix it + fix for dockutil
+brewcaskinstall "/opt/homebrew-cask/Caskroom/slack/" slack
 
 killosxprefs
 killosxdock
