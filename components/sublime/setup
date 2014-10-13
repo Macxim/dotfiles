@@ -11,13 +11,16 @@ mkdir -p "$HOME/Library/Application Support/Sublime Text 3/Installed Packages"
 curl -O https://sublime.wbond.net/Package%20Control.sublime-package -o "~/Library/Application Support/Sublime Text 3/Installed Packages/Package Control.sublime-package"
 
 
-
-if [ ! -e "~/Library/Application Support/Sublime Text 3/Packages/" ]
+ST3_PACKAGES="~/Library/Application Support/Sublime Text 3/Packages/"
+if [ ! -e $ST3_PACKAGES ]
 then
-  rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-  cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+  rm -rf $ST3_PACKAGES/User
+  cd $ST3_PACKAGES
   echo_title_install "Sublime Text 3 User Preferences"
   git clone https://github.com/Macxim/sublime-text-settings.git "User"
+  echo_title_install "Predawn Theme for Sublime Text 3"
+  cd $ST3_PACKAGES
+  git clone https://github.com/jamiewilson/predawn "Predawn"
 else
   echo_title_update "Sublime Text 3 User Preferences"
   git -C / pull
