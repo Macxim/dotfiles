@@ -9,10 +9,10 @@ brewcaskinstall "AppCleaner"
 # http://shauninman.com/archive/2011/10/20/day_o_mac_menu_bar_clock
 brewcaskinstall "Day-O"
 openifnot "Day-O" "/Applications/Day-O.app"
+# Date & Time format: E HH:mm
 
 # http://brettterpstra.com/projects/nvalt/
 brewcaskinstall "nvalt"
-openifnot "nvALT" "/Applications/nvalt.app"
 
 # https://justgetflux.com
 brewcaskinstall "Flux"
