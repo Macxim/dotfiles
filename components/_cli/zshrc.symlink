@@ -79,3 +79,7 @@ alias list="cat <(list-aliases) <(list-functions) | sort"
 alias search="list | grep"
 
 source $DOTFILES/submodules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# key binding
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char
