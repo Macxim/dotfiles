@@ -24,7 +24,8 @@ brewcaskinstall Adium
 # brewcaskinstall Slack
 # dockutil --no-restart --add "/Applications/Slack.app" --after LimeChat
 # so here is the way to fix it + fix for dockutil
-brewcaskinstall "`ls -d /*/* /opt/homebrew-cask/Caskroom/slack | grep Slack`" slack
+# brewcaskinstall "`ls -d /*/* /opt/homebrew-cask/Caskroom/slack | grep Slack`" slack
+brewcaskinstall "/opt/homebrew-cask/Caskroom/slack/" slack
 
 killosxprefs
 killosxdock
