@@ -11,17 +11,29 @@ mkdir -p "$HOME/Library/Application Support/Sublime Text 3/Installed Packages"
 curl -O https://sublime.wbond.net/Package%20Control.sublime-package -o "~/Library/Application Support/Sublime Text 3/Installed Packages/Package Control.sublime-package"
 
 
-
-if [ ! -e "~/Library/Application Support/Sublime Text 3/Packages/" ]
+ST3_PACKAGES="$HOME/Library/Application Support/Sublime Text 3/Packages"
+if [[ ! -d $ST3_PACKAGES/User ]]
 then
-  rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-  cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
   echo_title_install "Sublime Text 3 User Preferences"
-  git clone https://github.com/Macxim/sublime-text-settings.git "User"
-  echo_title_install "Predawn Theme for Sublime Text 3"
-  cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
-  git clone https://github.com/jamiewilson/predawn "Predawn"
+  git clone https://github.com/Macxim/sublime-text-settings.git $ST3_PACKAGES/User
 else
   echo_title_update "Sublime Text 3 User Preferences"
-  git -C / pull
+  cd $ST3_PACKAGES/User
+  git pull
 fi
+
+# If the dotfiles directory does not exist in $HOME
+# git clone it! If it exists, pull and update it.
+if [[ ! -d $HOME/dotfiles ]]
+then
+  git clone http://github.com/Macxim/dotfiles.git $HOME/dotfiles
+  git submodule init
+else
+  cd $HOME/dotfiles
+  git pull
+fi
+
+
+  echo_title_install "Predawn Theme for Sublime Text 3"
+  cd $ST3_PACKAGES
+  git clone https://github.com/jamiewilson/predawn "Predawn"
