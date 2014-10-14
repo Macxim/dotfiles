@@ -6,13 +6,22 @@ dockutil --add '/Applications/Sublime Text.app'
 # Make sure we can start Sublime Text from the command line.
 ln -sf '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' /usr/local/bin/subl
 
-# Install the Package Control package.
-mkdir -p "$HOME/Library/Application Support/Sublime Text 3/Installed Packages"
-curl -O https://sublime.wbond.net/Package%20Control.sublime-package -o "~/Library/Application Support/Sublime Text 3/Installed Packages/Package Control.sublime-package"
+# If the Installed Packages directory does not exist
+# Create it!
+ST3_INSTALLED_PACKAGES="$HOME/Library/Application Support/Sublime Text 3/Installed Packages"
+if [[ ! -d $ST3_INSTALLED_PACKAGES ]]
+then
+  mkdir -p $ST3_INSTALLED_PACKAGES
+fi
 
+# Install the Package Control package if not already done.
+if [[ ! -f "$ST3_INSTALLED_PACKAGES/Package Control.sublime-package" ]]
+  then
+    curl -so "$ST3_INSTALLED_PACKAGES/Package Control.sublime-package" https://sublime.wbond.net/Package%20Control.sublime-package
+fi
 
 ST3_PACKAGES="$HOME/Library/Application Support/Sublime Text 3/Packages"
-# If the User directory does not exist in ST_PACKAGES
+# If the User directory does not exist in ST3_PACKAGES
 # git clone it! If it exists, pull and update it.
 if [[ ! -d $ST3_PACKAGES/User ]]
 then
