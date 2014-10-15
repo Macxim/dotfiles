@@ -15,3 +15,6 @@ defaults write com.apple.mail "NSToolbar Configuration MainWindow" -dict \
 	"TB Is Shown" 1 \
 	"TB Item Identifiers" '("deleteMessages:",NSToolbarFlexibleSpaceItem,NSToolbarSpaceItem,"orderFrontColorPanel:",NSToolbarFlexibleSpaceItem,"showComposeWindow:","checkNewMail:",NSToolbarSpaceItem,"reply_replyAll_forward","moveMessagesFromToolbar:",NSToolbarSpaceItem,"addSenderToContacts:","showAllHeaders:",NSToolbarFlexibleSpaceItem,Search)' \
 	"TB Size Mode" 1
+
+# Disable inline attachments (just show the icons)
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
