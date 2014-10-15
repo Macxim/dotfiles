@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# vertical list view
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
 # can figure how to use `defaults write` to handle this prefs
 # getting error `Cannot nest composite types (arrays and dictionaries)`
 # defaults write com.apple.finder "NSToolbar Configuration Browser" -dict-add "TB Item Identifiers" - array ...
@@ -36,6 +33,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
 # Use list view in all Finder windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
@@ -56,7 +56,15 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Allow QuickLook text selection
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
+# Disable the warning before emptying the Trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# Empty Trash securely by default
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+
 chflags hidden $HOME/"Automatically Add to iTunes.localized" &> /dev/null
+
+# Show the ~/Library folder
 chflags nohidden $HOME/Library
 
 
