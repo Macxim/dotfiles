@@ -12,8 +12,8 @@ defaults write com.apple.BezelServices kDimTime -int 300
 # Set Delay Until Repeat to 25 (almost the shortest)
 defaults write NSGlobalDomain InitialKeyRepeat 25
 
-# Set Key Repeat to 2 (the fastest way possible)
-defaults write NSGlobalDomain KeyRepeat 25
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 0
 
 # TO DO
 # Add Spanish keyboard
