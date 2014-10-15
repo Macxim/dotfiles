@@ -31,3 +31,8 @@
 # sudo mdutil -i on / > /dev/null
 # # Rebuild the index from scratch
 # sudo mdutil -E / > /dev/null
+
+
+# For future reference:  ~/Library/Preferences/com.apple.symbolichotkeys
+# Shortcut to launch Spotlight: Option + Space
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 1; value = { parameters = (32, 49, 524288); type = 'standard'; }; }"
