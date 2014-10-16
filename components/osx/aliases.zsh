@@ -20,8 +20,8 @@ alias killosxdock="killa Dock"
 alias killosx="killosxprefs && killa Dock Finder SystemUIServer NotificationCenter"
 
 # Show/hide hidden files in Finder
-alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killosxfinder"
-alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killosxfinder"
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killosxfinder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killosxfinder"
 
 # Hide/show all desktop icons (useful when presenting)
 alias desktop="defaults write com.apple.finder CreateDesktop -bool"
