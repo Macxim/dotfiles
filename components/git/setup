@@ -7,6 +7,3 @@ then
 fi
 
 brewcaskinstall "SourceTree"
-
-killosxprefs
-killosxdock

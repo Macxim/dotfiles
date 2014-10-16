@@ -8,6 +8,3 @@ brewcaskinstall "Vox"
 
 brewcaskinstall "Subtitles"
 brewcaskinstall "Jubler"
-
-killosxprefs
-killosxdock

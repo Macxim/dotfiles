@@ -16,6 +16,3 @@ brewcaskinstall "NameChanger"
 brewcaskinstall "GrandPerspective"
 
 #brewcaskinstall "VirtualBox"
-
-killosxprefs
-killosxdock

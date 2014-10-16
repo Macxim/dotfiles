@@ -44,7 +44,7 @@ Open your dotfiles in [your configured editor](components/editor/editor.zsh).
 ### `$ .symlinks`
 
 Link all `*.symlink` files into your `~/`.
-When you run this command it will ask you if there is already existing files (to avoid file lose).  
+When you run this command it will ask you if there is already existing files (to avoid file lose).
 _Note that this command will not bother you for dotfiles alread symlinked._
 
 ### `$ .submodules-add {name} {git://...}`
@@ -61,7 +61,7 @@ Open the AppStore (at least on OS X).
 
 ### `$ killosx`
 
-Reload OSX Finder, Dock & Menubar. Alias for `killosxfinder`, `killosxdock` & `killosxmenubar`.
+Reload OSX Finder, Dock, Menubar & Notification Center. There is also `killosxprefs`, `killosxfinder` && `killosxdock`.
 
 ### `$ list`
 
