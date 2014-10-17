@@ -15,5 +15,8 @@ defaults write NSGlobalDomain InitialKeyRepeat 25
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+# Disable the Character Accent Menu
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # TO DO
 # Add Spanish keyboard
