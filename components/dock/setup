@@ -17,6 +17,8 @@ dockApps=(
    "/Applications/Utilities/Terminal.app"
    "/Applications/SourceTree.app"
    "/Applications/Transmit.app"
+   "/Applications/nvALT.app"
+   "/Applications/AppCleaner.app"
    "/Applications/YoruFukurou.app"
    "/Applications/LimeChat.app"
    "/Applications/`ls /Applications | grep Slack`"
