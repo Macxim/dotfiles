@@ -1,0 +1,43 @@
+#!/bin/zsh
+
+# The purpose of this component
+# is to build the Dock, one app at a time.
+# Dock preferences are located in components/osx/preferences/Dock
+
+echo_title_update "Dock"
+
+dockutil --no-restart --remove all
+
+dockApps=(
+   "/Applications/Mail.app"
+   "/Applications/Sunrise.app"
+   "/Applications/Safari.app"
+   "/Applications/Google Chrome.app"
+   "/Applications/Firefox.app"
+   "/Applications/Utilities/Terminal.app"
+   "/Applications/SourceTree.app"
+   "/Applications/Transmit.app"
+   "/Applications/YoruFukurou.app"
+   "/Applications/LimeChat.app"
+   "/Applications/`ls /Applications | grep Slack`"
+   )
+
+for i in "${dockApps[@]}"
+do
+   dockutil --no-restart --add $i
+done
+
+# This is outside of the loop because I couldn't find a way
+# to make it execute the dockutil parameters
+# Probably due to a quote issue
+dockutil --no-restart --add "~/Downloads" --view list --display folder --sort dateadded
+
+# This will add 3 spaces (blank separators)
+# Feel free to move them to organise your icons
+# Or you can just remove them
+for i in {1..3}
+do
+   defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+done
+
+killall Dock

@@ -22,4 +22,3 @@ brewcaskinstall Adium
 # like "Slack 0.44.2.app"...
 # so here is the way to fix it + fix for dockutil
 brewcaskinstall "/opt/homebrew-cask/Caskroom/slack/" slack
-# dockutil --no-restart --add "/Applications/Slack.app" --after LimeChat
