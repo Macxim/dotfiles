@@ -1,3 +1,4 @@
 #!/bin/zsh
 
+# Twitter client
 brewcaskinstall "YoruFukurou"
