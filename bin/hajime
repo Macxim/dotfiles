@@ -27,7 +27,4 @@ fi
 
 source $DOTFILES/bin/install
 
-if type "say" > /dev/null
-then
-  say "Dotfiles update is done"
-fi
+echo "We're done here!"

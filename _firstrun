@@ -3,7 +3,7 @@
 # define zsh as default shell
 chsh -s /bin/zsh $USER
 
-# If we are under a Mac OS X platform   
+# If we are under a Mac OS X platform
 if [[ "$(uname -s)" == "Darwin" ]]
 then
   echo "Before running myself, please be sure you have 'git' command working".
@@ -52,8 +52,5 @@ else
 
   . $HOME/dotfiles/bin/hajime --full
 
-  if ! type "say" > /dev/null
-  then
-    say "Setup is done \!"
-  fi
+  echo "Setup is done \!"
 fi
