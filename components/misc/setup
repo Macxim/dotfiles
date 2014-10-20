@@ -1,4 +1,23 @@
 #!/bin/zsh
 
+# Image Optimization
+brewcaskinstall "ImageOptim"
+brewcaskinstall "ImageAlpha"
+
+# Markdown Editor
+brewcaskinstall "Mou"
+
+# File archiver
+brewcaskinstall "The Unarchiver"
+brewcaskinstall "Keka"
+
+# Mass Renamer
+brewcaskinstall "NameChanger"
+
+# Show Disk Usage
+brewcaskinstall "GrandPerspective"
+
 # Twitter client
 brewcaskinstall "YoruFukurou"
+
+#brewcaskinstall "VirtualBox"
