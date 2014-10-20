@@ -27,4 +27,6 @@ fi
 
 source $DOTFILES/bin/install
 
-echo "We're done here!"
+echo ""
+echo_success "We're done here\!"
+echo ""

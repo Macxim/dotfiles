@@ -12,7 +12,9 @@ fi
 # required first
 setup brew
 
-echo "Password might be required"
+echo ""
+echo_warning "Password might be required."
+echo ""
 
 if [ "$FULLINSTALL" = "true" ]
 then

@@ -52,5 +52,7 @@ else
 
   . $HOME/dotfiles/bin/hajime --full
 
-  echo "Setup is done \!"
+  echo ""
+  echo_success "Setup is done \!"
+  echo ""
 fi
