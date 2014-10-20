@@ -14,6 +14,9 @@ else
   git -C $LIMECHAT_THEME pull
 fi
 
+# Confirm to quit the app : false
+defaults write net.limechat.LimeChat Preferences.General.confirm_quit false
+
 brewcaskinstall Skype
 brewcaskinstall Adium
 
