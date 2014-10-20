@@ -21,11 +21,6 @@ npmig gulp
 npmig grunt
 npmig grunt-cli
 
-# code quality tools
-npmig htmlhint
-npmig csslint
-npmig jshint
-
 # css tools
 npmig autoprefixer
 
