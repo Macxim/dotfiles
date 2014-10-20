@@ -9,25 +9,25 @@ echo_title_update "Dock"
 dockutil --no-restart --remove all
 
 dockApps=(
-   "/Applications/Mail.app"
-   "/Applications/Sunrise.app"
-   "/Applications/Safari.app"
-   "/Applications/Google Chrome.app"
-   "/Applications/Firefox.app"
-   "/Applications/Sublime Text.app"
-   "/Applications/Utilities/Terminal.app"
-   "/Applications/SourceTree.app"
-   "/Applications/Transmit.app"
-   "/Applications/nvALT.app"
-   "/Applications/AppCleaner.app"
-   "/Applications/YoruFukurou.app"
-   "/Applications/LimeChat.app"
-   "/Applications/`ls /Applications | grep Slack`"
-   )
+  "/Applications/Mail.app"
+  "/Applications/Sunrise.app"
+  "/Applications/Safari.app"
+  "/Applications/Google Chrome.app"
+  "/Applications/Firefox.app"
+  "/Applications/Sublime Text.app"
+  "/Applications/Utilities/Terminal.app"
+  "/Applications/SourceTree.app"
+  "/Applications/Transmit.app"
+  "/Applications/nvALT.app"
+  "/Applications/AppCleaner.app"
+  "/Applications/YoruFukurou.app"
+  "/Applications/LimeChat.app"
+  "/Applications/`ls /Applications | grep Slack`"
+  )
 
 for i in "${dockApps[@]}"
 do
-   dockutil --no-restart --add $i
+  dockutil --no-restart --add $i
 done
 
 # This is outside of the loop because I couldn't find a way
@@ -40,7 +40,7 @@ dockutil --no-restart --add "~/Downloads" --view list --display folder --sort da
 # Or you can just remove them
 for i in {1..6}
 do
-   defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+  defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
 done
 
 killall Dock

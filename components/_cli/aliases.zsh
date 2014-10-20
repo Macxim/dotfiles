@@ -11,9 +11,9 @@ alias kp="ps auxwww"
 # Detect which `ls` flavor is in use
 if ls --color &> /dev/null
 then # GNU `ls`
-	colorflag="--color"
+  colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+  colorflag="-G"
 fi
 
 # List all files colorized in long format
