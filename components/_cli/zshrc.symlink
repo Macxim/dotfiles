@@ -83,3 +83,9 @@ source $DOTFILES/submodules/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # key binding
 bindkey    "^[[3~"          delete-char
 bindkey    "^[3;5~"         delete-char
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# iojs stuff
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
