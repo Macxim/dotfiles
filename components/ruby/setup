@@ -2,6 +2,7 @@
 
 echo_title_installupdate "Gems"
 
+gemig bundler
 gemig sass
 #gemig compass
 #gemig scss-lint
