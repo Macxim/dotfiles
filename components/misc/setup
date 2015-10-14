@@ -17,7 +17,5 @@ brewcaskinstall "NameChanger"
 # Show Disk Usage
 brewcaskinstall "GrandPerspective"
 
-# Twitter client
-brewcaskinstall "YoruFukurou"
 
 #brewcaskinstall "VirtualBox"
