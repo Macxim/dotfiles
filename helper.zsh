@@ -1,7 +1,7 @@
 export DOTFILES=$HOME/dotfiles
 export PATH=$DOTFILES/bin:$PATH
 
-# load colors
+# Load colors
 autoload colors && colors
 for COLOR in RED GREEN YELLOW BLUE MAGENTA CYAN BLACK WHITE; do
     # todo wrap colours between %{ %} to avoid weird gaps in autocomplete
@@ -10,7 +10,7 @@ for COLOR in RED GREEN YELLOW BLUE MAGENTA CYAN BLACK WHITE; do
 done
 eval COLOR_RESET='$reset_color'
 
-# add some helpers for display
+# Add some helpers for display
 export CHAR_OK=✔
 export CHAR_ERROR=✗
 export CHAR_WARNING=⚠️
@@ -39,9 +39,8 @@ function setup () {
 # not sure it's better
 export OS=unix
 if [[ $(uname) = "Darwin" ]]; then; export OS=osx; fi
-#if [[ $OS == "osx" ]]; then; echo "yeahyyyy"; fi
 
-# use .localrc for SUPER SECRET CRAP that you don't
+# Use .localrc for stuff that you don't
 # want in your public, versioned repo.
 if [[ -f ~/.localrc ]]; then; source ~/.localrc; fi
 
@@ -51,22 +50,22 @@ if [[ -f ~/.localrc ]]; then; source ~/.localrc; fi
 typeset -U config_files
 config_files=($DOTFILES/components/*/*.zsh)
 
-# load the path files
+# Load the path files
 for file in ${(M)config_files:#*/path.zsh}
 do
   source $file
 done
 
-# load everything but the path and completion files
+# Load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
   source $file
 done
 
-# initialize autocomplete here, otherwise functions won't be loaded
+# Initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
-# load every completion after autocomplete loads
+# Load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
 do
   source $file
@@ -83,6 +82,7 @@ do
   fpath=($fdir $fpath)
 done
 unset function_path
+
 function_files=($DOTFILES/*/*/functions/*)
 for file in $function_files
 do
