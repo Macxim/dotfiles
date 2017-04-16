@@ -1,0 +1,12 @@
+packages: [
+  "editorconfig"
+  "emmet"
+  "file-icons"
+  "git-plus"
+  "language-babel"
+  "line-length-break"
+  "merge-conflicts"
+  "package-sync"
+  "pigments"
+  "prettier-atom"
+]

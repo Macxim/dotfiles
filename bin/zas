@@ -1,0 +1,37 @@
+#!/bin/zsh
+
+export DOTFILES="$( cd "$( dirname "${0}" )"/../ && pwd )"
+source $DOTFILES/helper.zsh
+
+echo "                              ";
+echo "██╗███████╗ █████╗ ███████╗██╗";
+echo "╚═╝╚══███╔╝██╔══██╗██╔════╝██║";
+echo "██╗  ███╔╝ ███████║███████╗██║";
+echo "██║ ███╔╝  ██╔══██║╚════██║╚═╝";
+echo "██║███████╗██║  ██║███████║██╗";
+echo "╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝";
+echo "                              ";
+
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Update dotfiles from remote
+echo_title_update "from remote"
+
+cd $DOTFILES
+git pull origin master
+git submodule init
+git submodule update
+
+export FULLINSTALL=false
+if [ "$1" = "--full" ]
+then
+	FULLINSTALL=true
+fi
+
+source $DOTFILES/bin/zasca
+
+echo ""
+echo_info "We're done here! ¡Todo instalado!"
+echo_success "🎉  Everything was installed successfully. Enjoy your new setup! 🎉 "

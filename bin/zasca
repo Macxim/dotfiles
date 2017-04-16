@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+DIR_BIN="$( cd "$( dirname "${0}" )" && pwd )"
+source $DIR_BIN/.symlinks
+
+# Required first
+setup homebrew
+
+# Ask for the administrator password upfront
+sudo -v
+
+setup shell
+setup macos
+setup git
+setup node
+setup dock

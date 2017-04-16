@@ -1,5 +1,5 @@
 #!/bin/zsh
-#source $DOTFILES/index.zsh
+source $DOTFILES/helper.zsh
 
 echo_title_installupdate 'dotfiles'
 
@@ -24,7 +24,7 @@ do
 
     if [ -h $dest ] && [ $source = `readlink $dest` ]
     then
-      # meh, do nothing, just skip silently :)
+      # Just skip silently :)
     else
       if [ $overwrite_all = "false" ] && [ $backup_all = "false" ] && [ $skip_all = "false" ]
       then

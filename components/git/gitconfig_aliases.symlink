@@ -1,0 +1,66 @@
+[alias]
+  co = checkout
+  cb = checkout -b
+
+  chp = cherry-pick
+
+  all = add -A .
+
+  c = commit
+  cm = commit -m
+  ca = commit --all
+  cam = commit --all -m
+  caa = commit --all --amend
+  caam = commit --all --amend -m
+  a = commit --amend --no-edit
+  aall = commit --amend --all --no-edit
+
+  rem = "!git checkout master && git pull && git checkout - && git rebase master"
+  r = rebase
+  rc = rebase --continue
+  ra = rebase --abort
+
+  g = pull
+
+  p = push
+  pf = push --force-with-lease
+  pff = push --force
+
+  clear= clean -f -d
+
+  st = status
+  sts = status -s
+
+  s = stash
+  su = stash -u
+  sslast = stash show -p stash@{0}
+
+  undo = reset --soft HEAD~1
+
+  amend-author = commit --amend --no-edit --author
+
+  hammer = "!git add -A . && git commit --amend --reuse-message=HEAD && git push -f"
+
+  # View abbreviated SHA, description, and history graph of the latest 20 commits
+  l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+  # stash, pull, stash pop
+  sync = "!git stash -u && git pull && git stash pop"
+
+  # Remove branches that have already been merged with the current branch
+  delete-merged = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+  # Merge GitHub pull request on top of the `master` branch
+  mergepr = "!f() { \
+    if [ $(printf \"%s\" \"$1\" | grep '^[0-9]\\+$' > /dev/null; printf $?) -eq 0 ]; then \
+      git fetch origin refs/pull/$1/head:pr/$1 && \
+      git rebase master pr/$1 && \
+      git checkout master && \
+      git merge pr/$1 && \
+      git branch -D pr/$1 && \
+      git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
+    fi \
+  }; f"
+
+  # search in content
+  search = "!git rev-list --all | xargs git grep"

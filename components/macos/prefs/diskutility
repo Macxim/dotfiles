@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+# Disk utility debug menu
+defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true

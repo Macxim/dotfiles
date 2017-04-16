@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+if ! type "brew" > /dev/null
+then
+  echo_title_install "Homebrew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew doctor
+else
+  echo_title_update "Homebrew"
+  brewu
+  brew cleanup
+fi
+
+brewtap homebrew/dupes
+brewtap homebrew/versions
+
+# cask
+brewtap caskroom/cask
+brewtap caskroom/versions
+brewinstall "brew-cask"

@@ -10,18 +10,15 @@ dockutil --no-restart --remove all
 
 dockApps=(
   "/Applications/Mail.app"
-  "/Applications/Sunrise.app"
-  "/Applications/Safari.app"
-  "/Applications/Google Chrome.app"
+  "/Applications/FirefoxDeveloperEdition.app"
   "/Applications/Firefox.app"
-  "/Applications/Sublime Text.app"
+  "/Applications/Atom.app"
   "/Applications/Utilities/Terminal.app"
   "/Applications/SourceTree.app"
   "/Applications/Transmit.app"
   "/Applications/nvALT.app"
-  "/Applications/AppCleaner.app"
   "/Applications/LimeChat.app"
-  "/Applications/`ls /Applications | grep Slack`"
+  "/Applications/AppCleaner.app"
   )
 
 for i in "${dockApps[@]}"
@@ -29,17 +26,15 @@ do
   dockutil --no-restart --add $i
 done
 
+dockutil --add '' --type spacer --section apps --after Mail
+dockutil --add '' --type spacer --section apps --after Firefox
+dockutil --add '' --type spacer --section apps --after Transmit
+dockutil --add '' --type spacer --section apps --after LimeChat
+
+
 # This is outside of the loop because I couldn't find a way
 # to make it execute the dockutil parameters
 # Probably due to a quote issue
 dockutil --no-restart --add "~/Downloads" --view list --display folder --sort dateadded
-
-# This will add 6 spaces (blank separators)
-# Feel free to move them to organise your icons
-# Or you can just remove them
-for i in {1..6}
-do
-  defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
-done
 
 killall Dock

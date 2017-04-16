@@ -1,0 +1,155 @@
+#!/bin/zsh
+
+# Disable the sound effects on boot
+# ⚠️ https://github.com/mathiasbynens/dotfiles/pull/290
+# sudo nvram SystemAudioVolume=" "
+
+# Show scrollbars
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+# Possible values: `WhenScrolling`, `Automatic` and `Always`
+
+# Disable auto correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Disable automatic termination of inactive apps
+defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# Disable Notification Center and remove the menu bar icon
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+
+# Disable Siri and remove the menu bar icon
+launchctl unload -w /System/Library/LaunchAgents/com.apple.Siri.plist 2> /dev/null
+
+# Disable automatic capitalization as it’s annoying when typing code
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# No .DS_Store on network
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Zoom: Options… > Use scroll wheel with modifier keys to zoom: ^ [control]
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask 262144
+
+# Zoom: Options… > Disable zoom with cmd+scroll
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool false
+
+# Enable AirDrop over Ethernet and on unsupported Macs:
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Set sidebar icon size to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Enable spring loading for directories
+defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+
+# Remove the spring loading delay for directories
+defaults write NSGlobalDomain com.apple.springing.delay -float 0
+
+# Disable volume change feedback
+defaults write NSGlobalDomain com.apple.sound.beep.feedback -int 0
+
+# Reset Launchpad
+find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
+
+# Enable local FTP Server
+sudo launchctl load -w /System/Library/LaunchDaemons/ftp.plist > /dev/null 2>&1
+
+# Set language and text formats
+# Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
+# `Inches`, `en_GB` with `en_US`, and `true` with `false`.
+defaults write NSGlobalDomain AppleLanguages -array "en" "fr" "es"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Disable hibernation (speeds up entering sleep mode)
+sudo pmset -a hibernatemode 0
+
+# Remove the sleep image file to save disk space
+sudo rm -rf /private/var/vm/sleepimage
+# Create a zero-byte file instead…
+sudo touch /private/var/vm/sleepimage
+# …and make sure it can’t be rewritten
+sudo chflags uchg /private/var/vm/sleepimage
+
+
+# Power Management settings
+# pmset -a: for all (-b battery, -c charger)
+############################################
+
+if type pmset  &> /dev/null
+then
+  # Computer sleep: Never
+  sudo pmset -a sleep 0
+
+  # Display sleep: 10 min
+  sudo pmset -a displaysleep 10
+
+  # Wake for network access
+  sudo pmset -a womp 1
+
+  # Automatically reduce brightness before display goes to sleep
+  sudo pmset -a halfdim 0
+
+  # Start up automatically after a power failure
+  sudo pmset -a autorestart 1
+
+  # Never wake the machine if lib open or when power source changes
+  sudo pmset -a lidwake 0
+  sudo pmset -a acwake 0
+fi
+
+
+
+# SecAssessment system policy security
+######################################
+
+if type spctl  &> /dev/null
+then
+  # Allow apps downloaded from "Anywhere"
+  sudo spctl --master-disable
+fi
+
+
+
+# Enable access for assistive devices
+#####################################
+
+if ls /private/var/db/.AccessibilityAPIEnabled &> /dev/null
+then
+  # /usr/bin/osascript -e 'tell application "System Events" to set UI elements enabled to true'
+  echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
+  sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
+fi

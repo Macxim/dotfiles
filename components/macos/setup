@@ -1,0 +1,54 @@
+#!/bin/zsh
+echo_title "Setting up macOS preferences"
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+COMPUTER_NAME="$USER"
+COMPUTER_MODEL=`sysctl -n hw.model`
+COMPUTER_NAME="Mac$COMPUTER_NAME"
+
+# Notifying computer name update only if name will be changed
+if [[ $COMPUTER_NAME != $(sudo scutil --get ComputerName) ]]
+then
+  echo_info "Computer name set to $COMPUTER_NAME"
+fi
+sudo scutil --set ComputerName $COMPUTER_NAME
+sudo scutil --set HostName $COMPUTER_NAME
+sudo scutil --set LocalHostName $COMPUTER_NAME
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
+
+source $DOTFILES/components/macos/prefs/_system
+source $DOTFILES/components/macos/prefs/activitymonitor
+source $DOTFILES/components/macos/prefs/calendar
+source $DOTFILES/components/macos/prefs/dashboard
+source $DOTFILES/components/macos/prefs/diskutility
+source $DOTFILES/components/macos/prefs/dock
+source $DOTFILES/components/macos/prefs/finder
+source $DOTFILES/components/macos/prefs/hotcorners
+source $DOTFILES/components/macos/prefs/keyboard
+source $DOTFILES/components/macos/prefs/mail
+source $DOTFILES/components/macos/prefs/menubar
+source $DOTFILES/components/macos/prefs/mouse
+source $DOTFILES/components/macos/prefs/photos
+source $DOTFILES/components/macos/prefs/safari
+source $DOTFILES/components/macos/prefs/screencapture
+source $DOTFILES/components/macos/prefs/screensaver
+source $DOTFILES/components/macos/prefs/spotlight
+source $DOTFILES/components/macos/prefs/terminal
+source $DOTFILES/components/macos/prefs/timemachine
+
+
+# Shutdown affected applications
+for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
+  "Mail" "Safari" "SystemUIServer" "iCal" "iTunes" "Activity Monitor";
+do
+  killa "$app"
+done

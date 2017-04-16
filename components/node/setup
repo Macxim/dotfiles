@@ -5,24 +5,3 @@ then
   echo_title_install "Node.js"
   brewinstall node
 fi
-
-echo_title_installupdate "NPM global packages"
-if [ "$FULLINSTALL" = "true" ]
-then
-  npmug
-fi
-
-# release tool
-npmig mversion
-
-# build tools
-npmig component
-npmig gulp
-npmig grunt
-npmig grunt-cli
-
-# css tools
-npmig autoprefixer
-
-# package helpers
-npmig bower

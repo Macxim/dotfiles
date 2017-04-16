@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+# Never require password after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 0

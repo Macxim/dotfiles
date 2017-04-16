@@ -1,0 +1,5 @@
+# See https://github.com/jirsbek/SSH-keys-in-macOS-Sierra-keychain
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes

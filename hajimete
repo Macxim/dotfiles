@@ -20,8 +20,5 @@ then
   echo "Dotfiles have not been downloaded correctly. Aborting."
 else
   echo "Dotfiles have been downloaded. Let's proceed."
-
-  . $HOME/dotfiles/bin/zasca --full
-
-  echo "🎉  Everything was installed successfully. Enjoy your new setup! 🎉 "
+  . $HOME/dotfiles/bin/zas --full
 fi
