@@ -41,7 +41,7 @@ When you run this command, you will be asked if there are already existing files
 
 ### `$ .submodules-update`
 
-Update & commit updated submodules
+Update & commit updated submodules.
 
 
 ---
