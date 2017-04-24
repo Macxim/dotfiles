@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-TERM_PROFILE='FreshCut'
+TERM_PROFILE='Snazzy'
 if [ "$(defaults read com.apple.terminal 'Default Window Settings')" != "$TERM_PROFILE" ]
 then
   echo_title "Setup Terminal.app profile"
