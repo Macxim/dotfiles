@@ -10,6 +10,7 @@ dockutil --no-restart --remove all
 
 dockApps=(
   "/Applications/Mail.app"
+  "/Applications/Calendar.app"
   "/Applications/FirefoxDeveloperEdition.app"
   "/Applications/Firefox.app"
   "/Applications/Atom.app"
@@ -26,7 +27,7 @@ do
   dockutil --no-restart --add $i
 done
 
-dockutil --add '' --type spacer --section apps --after Mail
+dockutil --add '' --type spacer --section apps --after Calendar
 dockutil --add '' --type spacer --section apps --after Firefox
 dockutil --add '' --type spacer --section apps --after Transmit
 dockutil --add '' --type spacer --section apps --after LimeChat
