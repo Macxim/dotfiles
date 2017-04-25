@@ -1,0 +1,42 @@
+#!/bin/zsh
+
+
+# Windows management
+brewcaskinstall spectacle
+
+# Video Players
+brewcaskinstall vlc
+brewcaskinstall mplayerx
+brewcaskinstall webtorrent
+
+# Disk Usage Utility
+brewcaskinstall grandperspective
+
+# Status bar for syncthing
+brewcaskinstall syncthing-bar
+
+# Adapt computer's display to the time of day
+brewcaskinstall flux
+
+# Image Optimization
+brewcaskinstall imageoptim
+
+# Mouse Settings
+brewcaskinstall logitech-control-center
+
+# Screenshots sharing
+brewcaskinstall cloudup
+
+# Chat apps
+brewcaskinstall slack
+brewcaskinstall discord
+brewcaskinstall gitter
+brewcaskinstall skype
+brewcaskinstall caprine
+brewcaskinstall limechat
+
+# Cleaning
+brewcaskinstall appcleaner
+
+# Notetaking
+brewcaskinstall nvalt
