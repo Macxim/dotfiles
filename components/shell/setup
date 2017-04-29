@@ -11,3 +11,4 @@ npmig tldr
 npmig trash
 
 brewinstall tree
+brewinstall heroku-toolbelt
