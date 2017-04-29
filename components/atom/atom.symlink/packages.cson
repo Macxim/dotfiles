@@ -4,6 +4,7 @@ packages: [
   "file-icons"
   "git-plus"
   "language-babel"
+  "language-javascript-jsx"
   "line-length-break"
   "merge-conflicts"
   "package-sync"
