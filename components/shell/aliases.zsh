@@ -14,10 +14,12 @@ else # OS X `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -l ${colorflag}"
-
-# List all files colorized in long format, including dot files
-alias ll="ls -la ${colorflag}"
+# • -F = trailing / in directories
+# • -l = vertical list
+# • -a = dotfiles
+# • -h = human readable filesizes
+# • -G = colour coding
+alias ll="ls -Flash ${colorflag}"
 
 # List only directories
 alias lsd='ls -l ${colorflag} | grep "^d"'
