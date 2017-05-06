@@ -2,7 +2,6 @@ packages: [
   "editorconfig"
   "emmet"
   "file-icons"
-  "git-plus"
   "language-babel"
   "language-javascript-jsx"
   "line-length-break"
