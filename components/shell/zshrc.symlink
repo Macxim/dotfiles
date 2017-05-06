@@ -2,6 +2,11 @@
 
 source $HOME/dotfiles/helper.zsh
 
+# Tab completion with case insensitivity
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# MENU_COMPLETE will skip the correction and immediately insert the first possible match
+setopt MENU_COMPLETE
+
 HISTFILE=~/.history
 HISTSIZE=SAVEHIST=99999
 setopt APPEND_HISTORY
