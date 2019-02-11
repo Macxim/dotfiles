@@ -31,15 +31,11 @@ brewcaskinstall flux
 # Image Optimization
 brewcaskinstall imageoptim
 
-# Mouse Settings
-brewcaskinstall logitech-control-center
-
 # Screenshots sharing
 brewcaskinstall cloudup
 
 # Chat apps
 brewcaskinstall franz
-brewcaskinstall limechat
 
 # Cleaning
 brewcaskinstall appcleaner

@@ -3,11 +3,11 @@
 # define zsh as default shell
 chsh -s /bin/zsh $USER
 
-read -q "xcode?Did you downloaded and installed Xcode from the App Store?" 
+read -q "xcode?Did you downloaded and installed Xcode from the App Store? (y/n) \n" 
 if [[ "$xcode" =~ ^[Yy]$ ]]
 then
-  xcode-select --install
-  sudo xcodebuild -license
+  echo "Good! Now install Xcode CLI tools with `xcode-select --install`"
+  echo "Next. Agree to Xcode License Agreements with `sudo xcodebuild -license`"
 fi
 
 

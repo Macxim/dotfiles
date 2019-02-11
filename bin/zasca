@@ -13,4 +13,5 @@ setup shell
 setup macos
 setup git
 setup node
+setup misc
 setup dock
