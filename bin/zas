@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# define zsh as default shell
-chsh -s /bin/zsh $USER
-
 export DOTFILES="$( cd "$( dirname "${0}" )"/../ && pwd )"
 source $DOTFILES/helper.zsh
 
