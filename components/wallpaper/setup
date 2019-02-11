@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-# Add reddit-background to /usr/local/bin/
-if [[ ! -d /usr/local/bin/reddit-backgrounds ]]
-then
-  git clone https://github.com/rconradharris/reddit-backgrounds.git /usr/local/bin/reddit-backgrounds
-fi
