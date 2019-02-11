@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# Browsers
+brewcaskinstall google-chrome
+brewcaskinstall firefox
+
+# Editor
+brewcaskinstall visual-studio-code
 
 # Windows management
 brewcaskinstall spectacle
@@ -8,6 +14,10 @@ brewcaskinstall spectacle
 brewcaskinstall vlc
 brewcaskinstall mplayerx
 brewcaskinstall webtorrent
+brewcaskinstall iina
+
+# Gif maker
+brewcaskinstall licecap
 
 # Disk Usage Utility
 brewcaskinstall grandperspective
@@ -28,11 +38,7 @@ brewcaskinstall logitech-control-center
 brewcaskinstall cloudup
 
 # Chat apps
-brewcaskinstall slack
-brewcaskinstall discord
-brewcaskinstall gitter
-brewcaskinstall skype
-brewcaskinstall caprine
+brewcaskinstall franz
 brewcaskinstall limechat
 
 # Cleaning

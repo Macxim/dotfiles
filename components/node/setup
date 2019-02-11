@@ -4,4 +4,5 @@ if ! type "node" > /dev/null
 then
   echo_title_install "Node.js"
   brewinstall node
+  brew install yarn --ignore-dependencies
 fi

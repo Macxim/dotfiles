@@ -3,14 +3,14 @@
   path = ~/.gitconfig_aliases
 
 [user]
-  name = Maxime Laforet
-  email = me@macx.im
+	name = Maxime Laforet
+	email = me@macx.im
 
 [github]
   user = Macxim
 
 [core]
-  editor = atom -w
+  editor = code -w
 
 [credential]
   helper = osxkeychain
@@ -23,7 +23,7 @@
 
 [push]
   # Push only current branch by default
-  default = current
+	default = simple
 
   # Push tags by default
   followTags = true
@@ -40,7 +40,7 @@
   whitespace = fix
 
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesfile = /Users/macxim/.gitignore_global
 
   quotepath = false
 
@@ -82,8 +82,8 @@
   smudge = git lfs smudge %f
   required = true
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
 [mergetool "sourcetree"]
-	cmd = /usr/local/Caskroom/sourcetree/2.0.5.3/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 	trustExitCode = true
+	keepBackup = false

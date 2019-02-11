@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-export EDITOR="atom"
+export EDITOR="code"
 export EDITOR_SYNC="$EDITOR -w"

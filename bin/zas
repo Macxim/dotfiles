@@ -28,6 +28,11 @@ export FULLINSTALL=false
 if [ "$1" = "--full" ]
 then
 	FULLINSTALL=true
+	read -p "Did you downloaded Xcode from the AppStore?" confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+	xcode-select --install
+	sudo xcodebuild -license
+
+	git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 fi
 
 source $DOTFILES/bin/zasca

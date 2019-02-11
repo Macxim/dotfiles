@@ -11,14 +11,13 @@ dockutil --no-restart --remove all
 dockApps=(
   "/Applications/Mail.app"
   "/Applications/Calendar.app"
-  "/Applications/FirefoxDeveloperEdition.app"
   "/Applications/Firefox.app"
-  "/Applications/Atom.app"
+  "/Applications/Chrome.app"
+  "/Applications/Safari.app"
+  "/Applications/Visual\ Studio\ Code.app"
   "/Applications/Utilities/Terminal.app"
   "/Applications/SourceTree.app"
-  "/Applications/Transmit.app"
-  "/Applications/nvALT.app"
-  "/Applications/LimeChat.app"
+  "/Applications/Franz.app"
   "/Applications/AppCleaner.app"
   )
 

@@ -11,10 +11,10 @@ else
   brew cleanup
 fi
 
-brewtap homebrew/dupes
-brewtap homebrew/versions
+brew tap homebrew/dupes
+brew tap homebrew/versions
 
 # cask
-brewtap caskroom/cask
-brewtap caskroom/versions
+brew tap caskroom/cask
+brew tap caskroom/versions
 brewinstall "brew-cask"

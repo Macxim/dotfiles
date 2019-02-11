@@ -20,29 +20,6 @@ $ curl -fsSL https://raw.github.com/Macxim/dotfiles/master/hajimete | zsh
 
 This command should update this repository, then trigger `zasca` (which is the heart of these _dotfiles_).
 
-### `$ .f`
-
-Open your dotfiles using `open` command (eg: on macOS, Finder.app).
-
-### `$ e [file]`
-
-Open a file/directory in your [configured editor](components/atom/editor.zsh) (Atom in my case).
-If you don't provide any argument, this will open the current folder.
-
-
-### `$ .fe`
-
-Open your dotfiles in your [configured editor](components/atom/editor.zsh) (Atom in my case).
-
-### `$ .symlinks`
-
-Link all `*.symlink` files into your `~/`.
-When you run this command, you will be asked if there are already existing files.
-
-### `$ .submodules-update`
-
-Update & commit updated submodules.
-
 
 ---
 
@@ -58,13 +35,3 @@ Here is what is automatically handled by this awesome [index.zsh](index.zsh) (in
 - `component/*.symlink`: Any files ending in `*.symlink` get symlinked into your $HOME (_prefixed by `.`_). This is so you can keep all of those versioned in your dotfiles but still keep those autoloaded files in your home directory. These get symlinked in when you run `$ .symlinks`.
 
 **Note: to setup one component only, just run `$ setup {component_name}`**
-
----
-
-## Inspired by
-
-- https://github.com/MoOx/dotfiles
-- https://github.com/holman/dotfiles
-- https://github.com/mathiasbynens/dotfiles
-- https://github.com/necolas/dotfiles
-- https://github.com/kud/my/

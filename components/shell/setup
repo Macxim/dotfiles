@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-brewinstall zsh-completions
-
 source $DOTFILES/components/shell/preferences/terminal
 
 # better than man

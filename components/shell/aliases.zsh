@@ -38,3 +38,8 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+
 
 # youtube-dl
 alias ytdl="youtube-dl -o '~/Music/%(title)s.%(ext)s' --extract-audio --audio-format mp3 --audio-quality 0 $1"
+
+# Ember Dev - Upgrading and Clearing Cache
+alias nombom='npm cache clear --force && bower cache clean && yarn cache clean && rm -rf node_modules bower_components tmp/ && yarn && bower install'
+alias nom='npm cache clear --force && rm -rf node_modules && npm install'
+alias bom='bower cache clean && rm -rf bower_components && bower install'
