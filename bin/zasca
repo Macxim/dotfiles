@@ -1,7 +1,5 @@
 #!/bin/zsh
 
-chsh -s /bin/zsh $USER
-
 DIR_BIN="$( cd "$( dirname "${0}" )" && pwd )"
 source $DIR_BIN/.symlinks
 

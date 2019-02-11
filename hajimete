@@ -3,6 +3,10 @@
 # define zsh as default shell
 chsh -s /bin/zsh $USER
 
+read -p "Did you downloaded and installed Xcode from the App Store?" confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+xcode-select --install
+sudo xcodebuild -license
+
 # If the dotfiles directory does not exist in $HOME
 # git clone it! If it exists, pull and update it.
 if [[ ! -d $HOME/dotfiles ]]
