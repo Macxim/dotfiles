@@ -32,10 +32,10 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 25
 # The above doesn't seem to work.
 # See https://apple.stackexchange.com/questions/127246/mavericks-how-to-add-input-source-via-plists-defaults/127250#127250
 # Enable French layout
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>1</integer><key>KeyboardLayout Name</key><string>French</string></dict>'
+# defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>1</integer><key>KeyboardLayout Name</key><string>French</string></dict>'
 
 # Enable Spanish layout
-defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
+# defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>Keyboard Layout</string><key>KeyboardLayout ID</key><integer>8</integer><key>KeyboardLayout Name</key><string>Spanish</string></dict>'
 
 # Set current Keyboard Layout to French
-defaults write /Library/Preferences/com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID "com.apple.keylayout.French"
+# defaults write /Library/Preferences/com.apple.HIToolbox AppleCurrentKeyboardLayoutInputSourceID "com.apple.keylayout.French"
