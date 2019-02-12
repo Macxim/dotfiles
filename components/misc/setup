@@ -24,6 +24,8 @@ brewcaskinstall licecap
 brewcaskinstall grandperspective
 
 # Status bar for syncthing
+brewinstall syncthing
+brew services start syncthing
 brewcaskinstall syncthing-bar
 
 # Adapt computer's display to the time of day
