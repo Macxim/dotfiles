@@ -16,7 +16,6 @@ export CHAR_ERROR=✗
 export CHAR_WARNING=⚠️
 export CHAR_BOOM=💥
 export CHAR_STARTER=❯
-function echo_info () { echo "[ ${COLOR_BLUE}i${COLOR_RESET} ] $1" }
 function echo_user () { echo "[ ${COLOR_YELLOW}?${COLOR_RESET} ] $1" }
 function echo_success () { echo "[ ${COLOR_GREEN}${CHAR_OK}${COLOR_RESET} ] $1" }
 function echo_warning () { echo "[ ${CHAR_WARNING}  ] $1"}
@@ -45,7 +44,7 @@ if [[ $(uname) = "Darwin" ]]; then; export OS=osx; fi
 if [[ -f ~/.localrc ]]; then; source ~/.localrc; fi
 
 ##
-# Source topic files
+# Source component files
 ##
 typeset -U config_files
 config_files=($DOTFILES/components/*/*.zsh)

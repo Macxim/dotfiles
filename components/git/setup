@@ -7,4 +7,4 @@ then
 fi
 
 brewinstall hub
-brewcaskinstall "SourceTree"
+brewcaskinstall sourcetree

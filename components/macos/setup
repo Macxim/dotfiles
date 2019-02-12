@@ -18,7 +18,7 @@ COMPUTER_NAME="Mac$COMPUTER_NAME"
 # Notifying computer name update only if name will be changed
 if [[ $COMPUTER_NAME != $(sudo scutil --get ComputerName) ]]
 then
-  echo_info "Computer name set to $COMPUTER_NAME"
+  echo_title "Computer name set to $COMPUTER_NAME"
 fi
 sudo scutil --set ComputerName $COMPUTER_NAME
 sudo scutil --set HostName $COMPUTER_NAME
