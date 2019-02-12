@@ -9,9 +9,9 @@ setup homebrew
 # Ask for the administrator password upfront
 sudo -v
 
+setup node
 setup shell
 setup macos
 setup git
-setup node
 setup misc
 setup dock

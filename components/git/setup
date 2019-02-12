@@ -6,4 +6,5 @@ then
   brewinstall git
 fi
 
+brew install hub
 brewcaskinstall "SourceTree"

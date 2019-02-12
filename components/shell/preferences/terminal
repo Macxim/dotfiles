@@ -4,7 +4,7 @@ TERM_PROFILE='Snazzy'
 if [ "$(defaults read com.apple.terminal 'Default Window Settings')" != "$TERM_PROFILE" ]
 then
   echo_title "Setup Terminal.app profile"
-  open "$DOTFILES/components/_cli/$TERM_PROFILE.terminal"
+  open "$DOTFILES/components/shell/preferences/$TERM_PROFILE.terminal"
   # Wait a bit to make sure the theme is loaded
   sleep 1
 
