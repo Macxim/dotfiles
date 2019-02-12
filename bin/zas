@@ -20,7 +20,7 @@ sudo -v
 echo_title_update "from remote"
 
 cd $DOTFILES
-git pull origin master
+git pull origin master &> /dev/null
 git submodule init
 git submodule update
 
