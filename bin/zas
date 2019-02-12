@@ -4,11 +4,11 @@ export DOTFILES="$( cd "$( dirname "${0}" )"/../ && pwd )"
 source $DOTFILES/helper.zsh
 
 echo "                              ";
-echo "██╗███████╗ █████╗ ███████╗██╗";
-echo "╚═╝╚══███╔╝██╔══██╗██╔════╝██║";
-echo "██╗  ███╔╝ ███████║███████╗██║";
-echo "██║ ███╔╝  ██╔══██║╚════██║╚═╝";
-echo "██║███████╗██║  ██║███████║██╗";
+echo "${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗ ${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗ ${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗";
+echo "╚═╝╚══${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╔╝${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╔══${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╔════╝${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║";
+echo "${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗  ${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╔╝ ${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║";
+echo "${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║ ${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╔╝  ${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╔══${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║╚════${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║╚═╝";
+echo "${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║  ${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}║${COLOR_CYAN}█${COLOR_RESET}${COLOR_CYAN}█${COLOR_RESET}╗";
 echo "╚═╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝";
 echo "                              ";
 
@@ -34,5 +34,4 @@ fi
 source $DOTFILES/bin/zasca
 
 echo ""
-echo_info "We're done here! ¡Todo instalado!"
-echo_success "🎉  Everything was installed successfully. Enjoy your new setup! 🎉 "
+echo "🎉 ${COLOR_GREEN}Done!. Enjoy your new setup!${COLOR_RESET}"
