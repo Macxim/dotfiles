@@ -1,5 +1,13 @@
 #!/bin/zsh
 
+# Development
+brewinstall wget
+brewinstall mysql
+brewinstall memcached
+brewinstall postgres
+brewinstall redis
+brewinstall mongodb
+
 # Browsers
 brewcaskinstall google-chrome
 brewcaskinstall firefox
