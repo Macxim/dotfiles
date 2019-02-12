@@ -2,5 +2,5 @@
 
 function brewcaskinstall() {
   echo_title_install "${@}"
-  brew cask install "${@}" --force 2>&1 | grep -v "already installed"
+  brew cask install "${@}" --force >/dev/null 2>&1
 }
