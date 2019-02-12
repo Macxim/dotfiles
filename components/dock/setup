@@ -11,10 +11,11 @@ dockutil --no-restart --remove all
 dockApps=(
   "/Applications/Mail.app"
   "/Applications/Calendar.app"
+  "/Applications/Spotify.app"
   "/Applications/Firefox.app"
-  "/Applications/Chrome.app"
+  "/Applications/Google Chrome.app"
   "/Applications/Safari.app"
-  "/Applications/Visual\ Studio\ Code.app"
+  "/Applications/Visual Studio Code.app"
   "/Applications/Utilities/Terminal.app"
   "/Applications/SourceTree.app"
   "/Applications/Franz.app"
@@ -26,10 +27,9 @@ do
   dockutil --no-restart --add $i
 done
 
-dockutil --add '' --type spacer --section apps --after Calendar
-dockutil --add '' --type spacer --section apps --after Firefox
-dockutil --add '' --type spacer --section apps --after Transmit
-dockutil --add '' --type spacer --section apps --after LimeChat
+dockutil --add '' --type spacer --section apps --after Spotify
+dockutil --add '' --type spacer --section apps --after Safari
+dockutil --add '' --type spacer --section apps --after Franz
 
 
 # This is outside of the loop because I couldn't find a way

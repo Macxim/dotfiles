@@ -10,11 +10,12 @@ brewcaskinstall visual-studio-code
 # Windows management
 brewcaskinstall spectacle
 
-# Video Players
+# Music/Video Players
 brewcaskinstall vlc
 brewcaskinstall mplayerx
 brewcaskinstall webtorrent
 brewcaskinstall iina
+brewcaskinstall spotify
 
 # Gif maker
 brewcaskinstall licecap
@@ -42,3 +43,5 @@ brewcaskinstall appcleaner
 
 # Notetaking
 brewcaskinstall nvalt
+
+brewcaskinstall dropbox
