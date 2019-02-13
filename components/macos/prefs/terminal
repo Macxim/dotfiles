@@ -5,3 +5,6 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # New tabs open with Default Working Directory
 defaults write com.apple.Terminal NewTabWorkingDirectoryBehavior -bool true
+
+# Disable the annoying line marks
+defaults write com.apple.Terminal ShowLineMarks -int 0
