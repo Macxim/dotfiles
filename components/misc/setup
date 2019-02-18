@@ -46,7 +46,7 @@ brewcaskinstall imageoptim
 brewcaskinstall cloudup
 
 # Chat apps
-brewcaskinstall franz
+brewcaskinstall station
 
 # Cleaning
 brewcaskinstall appcleaner
