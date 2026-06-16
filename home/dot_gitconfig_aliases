@@ -1,0 +1,53 @@
+[alias]
+	co = checkout
+	cb = checkout -b
+	chp = cherry-pick
+
+	all = add -A .
+
+	c = commit
+	cm = commit -m
+	ca = commit --all
+	cam = commit --all -m
+	caa = commit --all --amend
+	caam = commit --all --amend -m
+	a = commit --amend --no-edit
+	aall = commit --amend --all --no-edit
+
+	# Rebase current branch onto an updated main.
+	rem = "!git checkout main && git pull && git checkout - && git rebase main"
+	r = rebase
+	rc = rebase --continue
+	ra = rebase --abort
+
+	g = pull
+
+	p = push
+	pf = push --force-with-lease
+	pff = push --force
+
+	clear = clean -f -d
+
+	st = status
+	sts = status -s
+
+	s = stash
+	su = stash -u
+	sslast = stash show -p stash@{0}
+
+	undo = reset --soft HEAD~1
+	amend-author = commit --amend --no-edit --author
+
+	hammer = "!git add -A . && git commit --amend --reuse-message=HEAD && git push -f"
+
+	# Abbreviated graph log of the latest 20 commits.
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+	# stash, pull, pop.
+	sync = "!git stash -u && git pull && git stash pop"
+
+	# Delete branches already merged into the current one.
+	delete-merged = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+	# Search across all of history.
+	search = "!git rev-list --all | xargs git grep"

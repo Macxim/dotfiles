@@ -1,0 +1,31 @@
+# ~/.config/ghostty/config
+# Reload after edits: Cmd+Shift+, — list built-in themes: `ghostty +list-themes`
+
+# ── Theme (change this one line to reskin everything) ────────────────────────
+theme = tokyonight
+
+# ── Font ─────────────────────────────────────────────────────────────────────
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+font-thicken = true            # crisper glyphs on Retina
+
+# ── Window ───────────────────────────────────────────────────────────────────
+window-padding-x = 12
+window-padding-y = 12
+window-save-state = always     # restore tabs/splits after quit
+macos-titlebar-style = tabs
+background-opacity = 0.97
+background-blur = true
+
+# ── Behaviour ────────────────────────────────────────────────────────────────
+cursor-style = bar
+mouse-hide-while-typing = true
+macos-option-as-alt = true     # lets Alt work as Meta in the shell
+confirm-close-surface = false  # no "are you sure" on Cmd+W
+copy-on-select = true
+
+# ── Keybindings (iTerm-style split muscle memory) ────────────────────────────
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+keybind = cmd+enter=toggle_split_zoom
+keybind = cmd+k=clear_screen

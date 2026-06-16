@@ -1,0 +1,43 @@
+# ~/.config/starship.toml — prompt config.
+# Minimal, fast, shows what matters for web work: dir, git, node.
+
+add_newline = true
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$package\
+$cmd_duration\
+$line_break\
+$character"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+style = "bold yellow"
+
+[nodejs]
+symbol = " "
+style = "bold green"
+# Only show when a JS project is present.
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+
+[package]
+disabled = true
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](bold yellow) "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

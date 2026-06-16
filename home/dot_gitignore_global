@@ -1,0 +1,31 @@
+# ── macOS ────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# ── Editors / IDEs ───────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# ── Node / JS toolchain ──────────────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+npm-debug.log*
+pnpm-debug.log*
+.next/
+out/
+dist/
+.turbo/
+*.tsbuildinfo
+
+# ── Env / secrets ────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local

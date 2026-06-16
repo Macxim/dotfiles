@@ -1,0 +1,11 @@
+{{/* Prompts shown once on `chezmoi init`. Values feed the .gitconfig template. */ -}}
+{{- $name := promptStringOnce . "name" "Full name for git" "Maxime Laforet" -}}
+{{- $email := promptStringOnce . "email" "Personal git email" "me@macx.im" -}}
+{{- $workEmail := promptStringOnce . "workEmail" "Work git email (Ruby Labs)" -}}
+{{- $workDir := promptStringOnce . "workDir" "Directory for work repos (gets work email)" "~/Work" -}}
+
+[data]
+    name = {{ $name | quote }}
+    email = {{ $email | quote }}
+    workEmail = {{ $workEmail | quote }}
+    workDir = {{ $workDir | quote }}

@@ -1,0 +1,62 @@
+[user]
+	name = {{ .name }}
+	email = {{ .email }}
+
+[github]
+	user = Macxim
+
+# Work repos under {{ .workDir }} use your Ruby Labs email automatically.
+[includeIf "gitdir:{{ .workDir }}/"]
+	path = ~/.gitconfig-work
+
+[include]
+	path = ~/.gitconfig_aliases
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = code -w
+	excludesfile = ~/.gitignore_global
+	autocrlf = input
+	quotepath = false
+	untrackedCache = true
+
+[credential]
+	helper = osxkeychain
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+
+[branch]
+	sort = -committerdate
+
+[merge]
+	log = true
+	conflictstyle = zdiff3
+
+[diff]
+	colorMoved = default
+
+[apply]
+	whitespace = fix
+
+[color]
+	ui = auto
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

@@ -1,0 +1,4 @@
+# ~/.zprofile — runs for login shells. Put PATH-setup here.
+
+# Homebrew (Apple Silicon lives at /opt/homebrew, NOT /usr/local).
+eval "$(/opt/homebrew/bin/brew shellenv)"

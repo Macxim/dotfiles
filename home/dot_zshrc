@@ -1,0 +1,73 @@
+# ~/.zshrc — interactive shell config. Lean, no framework (Prezto/OMZ retired).
+
+export LANG="en_US.UTF-8"
+export EDITOR="code -w"
+
+# ── History ──────────────────────────────────────────────────────────────────
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY HIST_IGNORE_ALL_DUPS HIST_REDUCE_BLANKS INC_APPEND_HISTORY
+
+# ── Completion ───────────────────────────────────────────────────────────────
+autoload -Uz compinit && compinit -d "$HOME/.zcompdump"
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'   # case-insensitive
+
+# ── Node: fnm (auto-switches on cd via .node-version / .nvmrc) ────────────────
+eval "$(fnm env --use-on-cd)"
+
+# ── pnpm ─────────────────────────────────────────────────────────────────────
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in *":$PNPM_HOME:"*) ;; *) export PATH="$PNPM_HOME:$PATH" ;; esac
+
+# Project-local binaries first (so you rarely need `npx`).
+export PATH="./node_modules/.bin:$PATH"
+
+# ── Tools ────────────────────────────────────────────────────────────────────
+eval "$(zoxide init zsh)"          # `z <dir>` smart jump
+eval "$(starship init zsh)"        # prompt
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Theme coherence (Tokyo Night) across CLI tools.
+export BAT_THEME="TwoDark"         # closest built-in; matches the dark palette
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border \
+--color=bg+:#283457,bg:#16161e,border:#27a1b9,fg:#c0caf5,header:#ff9e64,\
+hl+:#2ac3de,hl:#2ac3de,info:#545c7e,marker:#ff007c,pointer:#ff007c,\
+prompt:#2ac3de,query:#c0caf5,spinner:#ff007c"
+
+# zsh plugins (installed via Homebrew)
+BREW_PREFIX="$(brew --prefix)"
+source "$BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" 2>/dev/null
+source "$BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" 2>/dev/null
+
+# ── Aliases ──────────────────────────────────────────────────────────────────
+alias ls="eza --group-directories-first --icons=auto"
+alias ll="eza -la --group-directories-first --git --icons=auto"
+alias lt="eza --tree --level=2 --icons=auto"
+alias cat="bat --paging=never"
+alias g="git"
+alias h="history"
+alias ..="cd .."
+alias c="tr -d '\n' | pbcopy"                 # trim newline + copy
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias df.="chezmoi edit --apply"              # edit dotfiles
+alias dfcd="chezmoi cd"                        # jump to dotfiles source
+
+# Clean reinstall of node deps (pnpm-first).
+alias nuke="rm -rf node_modules .next && pnpm install"
+
+# ── Functions (ported from the old dotfiles) ─────────────────────────────────
+mkd() { mkdir -p "$@" && cd "$@"; }            # make dir + enter
+
+o() { if [ $# -eq 0 ]; then open .; else open "$@"; fi; }   # open . or path
+
+dataurl() {                                    # file -> data: URL
+  local mimeType
+  mimeType=$(file -b --mime-type "$1")
+  [[ $mimeType == text/* ]] && mimeType="${mimeType};charset=utf-8"
+  echo "data:${mimeType};base64,$(openssl base64 -in "$1" | tr -d '\n')"
+}
+
+# ── Local overrides (never committed) ────────────────────────────────────────
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
